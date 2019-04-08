@@ -24,6 +24,7 @@ Using the HiBP API : https://haveibeenpwned.com/API/v2 , create a front end havi
 - make the UI components as reusable as possible 
 - don't use any external library or package
 
+
 Bonus points if you make the pagination dynamic, with adjacents like in the first example on this page:
 - https://getuikit.com/v2/docs/pagination-js.html
 
@@ -34,7 +35,10 @@ Bonus points if you make the pagination dynamic, with adjacents like in the firs
 ## Useful links
 - https://haveibeenpwned.com/API/v2#BreachesForAccount
 - https://haveibeenpwned.com/API/v2#AllBreaches
+
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI ;)
+
+- https://github.com/ryanmcdermott/clean-code-javascript
 
 ## Basic mocks - you can add any design you want, the mocks are made just to describe the functionality
 
