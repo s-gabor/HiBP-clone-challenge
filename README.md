@@ -23,11 +23,11 @@ Using the HiBP API : https://haveibeenpwned.com/API/v2 , create a front end havi
 
 ## Basic mocks - you can add any design you want, the mocks are made just to describe the functionality
 
-![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766#file-screen-shot-2019-04-06-at-17-07-06-png)
+![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766/raw/60ee01b8e1ee15905dcb48ad3cf23f4a61191bb0/Screen%2520Shot%25202019-04-06%2520at%252017.07.06.png)
 
-![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766#file-screen-shot-2019-04-06-at-17-07-15-png)
+![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766/raw/60ee01b8e1ee15905dcb48ad3cf23f4a61191bb0/Screen%2520Shot%25202019-04-06%2520at%252017.07.15.png)
 
-![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766#file-screen-shot-2019-04-08-at-10-43-50-png)
+![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766/raw/60ee01b8e1ee15905dcb48ad3cf23f4a61191bb0/Screen%2520Shot%25202019-04-08%2520at%252010.43.50.png)
 
-![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766#file-screen-shot-2019-04-08-at-10-43-58-png)
+![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766/raw/60ee01b8e1ee15905dcb48ad3cf23f4a61191bb0/Screen%2520Shot%25202019-04-08%2520at%252010.43.58.png)
 
