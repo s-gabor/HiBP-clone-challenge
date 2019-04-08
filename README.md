@@ -18,7 +18,8 @@ Using the HiBP API : https://haveibeenpwned.com/API/v2 , create a front end havi
   + compromised accounts
   + date added to HiBP
 - the detailed view must contain a breadcrumb which, by clicking on the parent (Breaches or Accounts), it must redirect you to the search page where it must have the same state as before clicking.
-- it should be a Single Page Application, so don't change the html file and don't add any ;)
+- it should be a Single Page Application, so don't change the html file and don't add any ;) use only JS to generate the pages
+- make the UI components as reusable as possible 
 - don't use any external library or package
 
 ## Use postman to test the API:
