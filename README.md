@@ -23,6 +23,7 @@ Using the HiBP API : https://haveibeenpwned.com/API/v2 , create a front end havi
 - it should be a Single Page Application, so don't change the html file and don't add any ;) use only JS to generate the pages
 - make the UI components as reusable as possible 
 - don't use any external library or package
+- have a look on this list and try to respect it as much as you see it fits your situation ;) : https://github.com/ryanmcdermott/clean-code-javascript
 
 
 Bonus points if you make the pagination dynamic, with adjacents like in the first example on this page:
@@ -38,8 +39,6 @@ Bonus points if you make the pagination dynamic, with adjacents like in the firs
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI ;)
 
-### Have a look on this list and respect it as much as you see it fits your situation ;) :
-- https://github.com/ryanmcdermott/clean-code-javascript
 
 ## Basic mocks - you can add any design you want, the mocks are made just to describe the functionality
 
