@@ -23,7 +23,7 @@ Using the HiBP API : https://haveibeenpwned.com/API/v2 , create a front end havi
 - it should be a Single Page Application, so don't change the html file and don't add any ;) use only JS to generate the pages
 - make the UI components as reusable as possible 
 - don't use any external library or package
-- have a look on this list and try to respect it as much as you see it fits your situation ;) : https://github.com/ryanmcdermott/clean-code-javascript
+- have a look on this list and try to respect it as much as you see it fits your situation ;) : https://github.com/ryanmcdermott/clean-code-javascript ( url to the book: https://www.investigatii.md/uploads/resurse/Clean_Code.pdf )
 
 
 Bonus points if you make the pagination dynamic, with adjacents like in the first example on this page:
