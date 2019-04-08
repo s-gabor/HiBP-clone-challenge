@@ -1,6 +1,8 @@
 # Have I Been PWNED clone application
 
 This is the site: https://haveibeenpwned.com/
+
+
 Have I been PWNED lets you check if you have an account that has been compromised in a data breach
 
 ## Requirements
@@ -21,6 +23,9 @@ Using the HiBP API : https://haveibeenpwned.com/API/v2 , create a front end havi
 - it should be a Single Page Application, so don't change the html file and don't add any ;) use only JS to generate the pages
 - make the UI components as reusable as possible 
 - don't use any external library or package
+
+Bonus points if you make the pagination dynamic:
+- https://getuikit.com/v2/docs/pagination-js.html
 
 ## Use postman to test the API:
 - https://www.getpostman.com/
