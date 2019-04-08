@@ -31,6 +31,11 @@ Bonus points if you make the pagination dynamic, with adjacents like in the firs
 - https://www.getpostman.com/
 - https://www.youtube.com/watch?v=t5n07Ybz7yI&t
 
+## Useful links
+- https://haveibeenpwned.com/API/v2#BreachesForAccount
+- https://haveibeenpwned.com/API/v2#AllBreaches
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI ;)
+
 ## Basic mocks - you can add any design you want, the mocks are made just to describe the functionality
 
 ![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766/raw/60ee01b8e1ee15905dcb48ad3cf23f4a61191bb0/Screen%2520Shot%25202019-04-06%2520at%252017.07.06.png)
