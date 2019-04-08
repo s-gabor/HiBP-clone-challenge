@@ -38,6 +38,7 @@ Bonus points if you make the pagination dynamic, with adjacents like in the firs
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI ;)
 
+### Have a look on this list and respect it as much as you see it fits your situation ;) :
 - https://github.com/ryanmcdermott/clean-code-javascript
 
 ## Basic mocks - you can add any design you want, the mocks are made just to describe the functionality
