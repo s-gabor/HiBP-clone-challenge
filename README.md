@@ -10,7 +10,7 @@ Have I been PWNED lets you check if you have an account that has been compromise
 Using the HiBP API : https://haveibeenpwned.com/API/v2 , create a front end having the following functionalities:
 
 - search for breaches and display them (with pagination and total number)
-  + if nothing was searched for the default page should display all the breaches
+  + if nothing was searched for, the default page should display all the breaches
 - search by account or email and display if your account was compromised in any breach. List them in the same way like in the previous view
 - add a detailed view for the breach where you display the following data:
   + description
