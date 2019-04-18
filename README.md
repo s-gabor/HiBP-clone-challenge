@@ -48,5 +48,5 @@ Bonus points if you make the pagination dynamic, with adjacents like in the firs
 
 ![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766/raw/60ee01b8e1ee15905dcb48ad3cf23f4a61191bb0/Screen%2520Shot%25202019-04-08%2520at%252010.43.50.png)
 
-![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766/raw/60ee01b8e1ee15905dcb48ad3cf23f4a61191bb0/Screen%2520Shot%25202019-04-08%2520at%252010.43.58.png)
+![mockup](https://gist.github.com/alexonaci/2e433aa8623f310128ef1c6cf8d21766/raw/730095dc43549df9f9d4964e03de07917d668c75/Screen%2520Shot%25202019-04-18%2520at%252013.24.02.png)
 
