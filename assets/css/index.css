@@ -7,9 +7,8 @@ nav {
     margin: 10px 0;
 }
 
-.selected {
-    background-color: steelblue;
-    color: white;
+button {
+    cursor: pointer;
 }
 
 .btn {
@@ -21,8 +20,17 @@ nav {
     margin: 2px;
 }
 
+.selected {
+    background-color: steelblue;
+    color: white;
+}
+
+#searchBar {
+    padding: 0 50px;
+}
+
 .search-btn {
-    width: 28%;
+    width: 29%;
     height: 32px;
     font-size: 16px;
     font-weight: bold;
@@ -81,4 +89,26 @@ nav {
     color: gray;
     background-color: rgb(247, 239, 255);
     cursor: pointer;
+}
+
+.details-path button {
+    border: none;
+    color: blue;
+    font-size: 16px;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-header p {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.details-header img {
+    width: 250px;
+    max-height: 150px;
+    background-color: rgb(226, 226, 226);
 }

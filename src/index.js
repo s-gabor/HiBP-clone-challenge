@@ -1,39 +1,50 @@
+// https://haveibeenpwned.com/api/v2/breaches
+// https://haveibeenpwned.com/api/v2/breachedaccount/{account}
+// https://haveibeenpwned.com/api/v2/breach/{name}
+const HIBP_API = 'https://haveibeenpwned.com/api/v2';
+
 const createNavbar = () => {
-    const $navbar = document.getElementById('navigation');
-    $navbar.innerHTML = `
+    const $nav = document.getElementById('nav');
+    $nav.innerHTML = `
         <button id="breaches-btn" class="btn">Breaches</button>
         <button id="accounts-btn" class="btn">Accounts</button>`;
+    
+    const $BreachesBtn = document.getElementById('breaches-btn');
+    const $AccountsBtn = document.getElementById('accounts-btn');
+    
+    $nav.addEventListener('click', (event) => {
+        if (event.target && event.target.id === 'breaches-btn') {
+            $BreachesBtn.classList.add('selected');
+            $AccountsBtn.classList.remove('selected');
+            render('breaches');
+        }
+        if (event.target && event.target.id === 'accounts-btn') {
+            $BreachesBtn.classList.remove('selected');
+            $AccountsBtn.classList.add('selected');
+            render('accounts');
+        }
+    });
 }
-
-const createSearchBar = (placeholder) => {
-    const $searchBar = document.getElementById('searchBar');
+    
+const createSearchBar = (parent, placeholder) => {
+    const $searchBar = document.createElement('div');
+    $searchBar.setAttribute('id', 'searchBar');
     $searchBar.innerHTML = `
         <input id="searchInput" class="search-input" type="search" placeholder=${placeholder}>
         <button id="searchBtn" class="search-btn">Search</button>`;
+
+    $searchBar.addEventListener('click', (event) => {
+        if (event.target && event.target.id === 'searchBtn') {
+            const breach = document.getElementById('searchInput').value;
+            render('details', breach);
+        }
+    });
+
+    parent.appendChild($searchBar);
 }
 
-const addNavbarListeners = () => {
-    const $BreachesBtn = document.getElementById('breaches-btn');
-    const $AccountsBtn = document.getElementById('accounts-btn');
-
-    $BreachesBtn.addEventListener('click', () => {
-        $BreachesBtn.classList.add('selected');
-        $AccountsBtn.classList.remove('selected');
-    });
-    
-    $AccountsBtn.addEventListener('click', () => {
-        $BreachesBtn.classList.remove('selected');
-        $AccountsBtn.classList.add('selected');
-    });
-}
-
-createNavbar();
-addNavbarListeners();
-createSearchBar('Site name...');
-
-const createArticles = (breaches) => {
-    const $articles = document.getElementById('articles');
-    $articles.innerHTML = '';
+const createArticles = (parent, breaches) => {
+    const $articles = document.createElement('div');
     breaches.forEach(breach => {
         const $article = document.createElement('article');
         $article.innerHTML = `
@@ -46,19 +57,71 @@ const createArticles = (breaches) => {
                     <p>Breached date: ${breach.BreachDate}</p>
                 </div>
                 <div class="article-btn">
-                    <button>i</button>
+                    <button id="info" name="${breach.Name}">i</button>
                 </div>
             </article>`;
+        $article.addEventListener('click', (event) => {
+            if (event.target && event.target.id === 'info') {
+                render('details', event.target.name);
+            }
+        })
         $articles.appendChild($article);
     });
+    parent.appendChild($articles);
 }
 
-const getBreaches = async () => {
-    const data = await fetch('https://haveibeenpwned.com/api/v2/breaches');
-    return data.json();
-};
+const renderAllBreaches = (parentId) => {
+    fetch(HIBP_API + '/breaches')
+        .then(response => response.json())
+        .then(data => createArticles(parentId, data))
+}
 
-const breachesData = getBreaches();
-Promise.resolve(breachesData).then((breaches) => {
-    createArticles(breaches);
-});
+const renderMain = (placeholder) => {
+    const $main = document.getElementById('main');
+    $main.innerHTML = '';
+    createSearchBar($main, placeholder);
+    renderAllBreaches($main);
+}
+
+const renderDetails = (breachName) => {
+    fetch(HIBP_API + '/breach/' + breachName)
+        .then(response => response.json())
+        .then(breach => {
+            const $main = document.getElementById('main');
+            $main.innerHTML = `
+                <div class="details-path">
+                    <button class="details-path-btn">Accounts</button> /
+                    <button class="details-path-btn">${breach.Name}</button>
+                </div>
+                <div class="details-header">
+                    <p>${breach.Name}</p>
+                    <img src="${breach.LogoPath}">
+                </div>
+                <div class="details-info">
+                    <p>${breach.Description}</p>
+                    <p><strong>Breach date:</strong> ${breach.BreachDate}</p>
+                    <p><strong>Date added th HIBP:</strong> ${breach.AddedDate}</p>
+                    <p><strong>Compromised accounts:</strong> ${breach.PwnCount}</p>
+                    <p><strong>Compromised data:</strong> ${breach.DataClasses}</p>
+                </div>`;
+        })
+}
+
+const render = (route, breachName) => {
+    switch(route) {
+        case 'breaches':
+            renderMain('SearchBreaches...');
+            break;
+        case 'accounts':
+            renderMain('SearchAccounts...');
+            break;
+        case 'details':
+            renderDetails(breachName);
+            break;
+        default:
+            console.log('default switch');
+    }
+}
+
+createNavbar();
+render('breaches');
